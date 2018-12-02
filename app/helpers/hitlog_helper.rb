@@ -1,0 +1,2 @@
+module HitlogHelper
+end

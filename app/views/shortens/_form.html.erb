@@ -1,0 +1,27 @@
+<%= form_with(model: shorten, local: true) do |form| %>
+  <div class="row">
+    <div class="col-md-8 column-in-center">
+      <% if shorten.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(shorten.errors.count, "error") %> prohibited this shorten from being saved:</h2>
+
+          <ul>
+          <% shorten.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+          </ul>
+        </div>
+      <% end %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-8 column-in-center">
+      <div class="input-group">
+        <%= form.text_field :real_url, id: :shorten_real_url, placeholder: "Paste a link to shorten it", :class => 'form-control' %>
+        <span class="input-group-btn">
+          <%= form.submit :class => 'btn btn-default sanz-btn' %>
+        </span>
+      </div>
+    </div>
+  </div>
+<% end %>

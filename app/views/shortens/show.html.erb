@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Short url:</strong>
+  <%= link_to "#{request.base_url}/s/#{@shorten.short_url}", "#{request.base_url}/s/#{@shorten.short_url}", class: "btn btn-info", target: :_blank %>
+</p>
+
+<p>
+  <strong>Real url:</strong>
+  <%= @shorten.real_url %>
+</p>
+
+<p>
+  <strong>Count:</strong>
+  <%= @shorten.count %>
+</p>
+
+<div class="col-md-2">
+  <%= link_to 'Back to Dashboard', root_path , class: "btn btn-warning" %>
+</div>

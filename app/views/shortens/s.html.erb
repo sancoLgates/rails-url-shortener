@@ -1,0 +1,30 @@
+<p id="notice"><%= @notice %></p>
+
+  <p>
+    <strong>IP:</strong>
+    <%= @ip %>
+  </p>
+  <p>
+    <strong>City:</strong>
+    <%= @city %>
+  </p>
+  <p>
+    <strong>Country:</strong>
+    <%= @country %>
+  </p>
+<% if @shorten %>
+  <p>
+    <strong>Short url:</strong>
+    <%= @shorten.short_url %>
+  </p>
+
+  <p>
+    <strong>Real url:</strong>
+    <%= @shorten.real_url %>
+  </p>
+
+  <p>
+    <strong>Count:</strong>
+    <%= @shorten.count %>
+  </p>
+<% end %>
