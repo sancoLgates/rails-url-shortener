@@ -3,6 +3,8 @@ class ShortensController < ApplicationController
 
   def index
     @shortens = Shorten.order(count: :DESC).limit(10)
+    # @hitlogs = Hitlog.order(created_at: :DESC).limit(10)
+    @hitlogs = Hitlog.select(:ip, :city, :country, :created_at, :'shortens.short_url').joins(:shorten).order(created_at: :DESC).limit(10)
   end
 
   def show

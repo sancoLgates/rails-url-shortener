@@ -37,6 +37,34 @@
   </div>
 </div>
 
+<div class="row">
+  <div class="col-md-10 column-in-center">
+    <h1>Last Clicked URL</h1>
+  </div>
+</div>
 
-<br>
+<div class="row">
+  <div class="col-md-10 column-in-center">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Short Url</th>
+          <th>IP</th>
+          <th>City</th>
+          <th>Country</th>
+        </tr>
+      </thead>
 
+      <tbody>
+        <% @hitlogs.each_with_index do |hitlog, index| %>
+          <tr <%= index %2 == 1 ? "class=success" : "class=danger" %> >
+            <td><%= link_to "#{request.base_url}/s/#{hitlog.short_url}", "#{request.base_url}/s/#{hitlog.short_url}", class: "btn btn-info", target: :_blank %></td>
+            <td><%= hitlog.ip %></td>
+            <td><%= hitlog.city %></td>
+            <td><%= hitlog.country %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>
