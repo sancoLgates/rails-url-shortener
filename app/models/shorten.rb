@@ -1,5 +1,5 @@
 class Shorten < ApplicationRecord
-  has_many :hitlogs
+  has_many :hitlogs, dependent: :destroy
   validates :real_url, presence: true
   validates :real_url, uniqueness: { case_sensitive: false }
   validates :short_url, uniqueness: { case_sensitive: false }

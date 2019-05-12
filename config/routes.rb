@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   
       root 'shortens#index'
       get 's/:name', to:'shortens#s'
+      get 'data', to:'shortens#data'
       post 'authenticate', to: 'authentication#authenticate'
       resources :shortens do
         resources :hitlogs

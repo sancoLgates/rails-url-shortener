@@ -26,6 +26,9 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'jwt'
 gem 'simple_command'
 
+gem 'will_paginate', '~> 3.1.1'
+gem 'will_paginate-bootstrap' 
+
 gem 'faker'
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'

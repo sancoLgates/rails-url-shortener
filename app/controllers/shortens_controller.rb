@@ -10,6 +10,10 @@ class ShortensController < ApplicationController
   def show
   end
 
+  def data
+    @shortens = Shorten.paginate page: params[:page], per_page: 10
+  end
+
   def s
     @shorten = Shorten.find_by(short_url: params[:name])
     if @shorten
