@@ -3,10 +3,11 @@ Simple URL Shortener with Rails
 Step test webapp:
 
 * clone this repo
-* run bundle install
+* run: bundle install
 * set username & password postgresql in config/database.yml
-* run rails db:create, db:migrate, and db:seed
-* run rails server default:localhost:3000
+* run: rails db:create, db:migrate, and db:seed
+* run: rails server 
+* access http://localhost:3000
 
 Step test API:
 * Use Postman or curl to get JWT token
